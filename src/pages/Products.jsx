@@ -138,7 +138,7 @@ export default function Products() {
             <span className="text-xs font-black uppercase tracking-widest text-orange-600 bg-orange-50 px-2.5 py-1 rounded-md border border-orange-100 inline-block">
               Executive Outlook
             </span>
-            <h2 className="text-3xl font-black text-emerald-950 tracking-tight">Message From Director of Inclusion</h2>
+            <h2 className="text-3xl font-black text-emerald-950 tracking-tight">Message From Management team</h2>
           </div>
           <div className="text-sm text-slate-600 font-medium space-y-4 leading-relaxed">
             <p>
@@ -153,13 +153,13 @@ export default function Products() {
         <div className="md:col-span-4 bg-[#FDFBF7] border border-orange-100 p-6 rounded-3xl flex flex-col items-center text-center space-y-4 relative overflow-hidden">
           <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-md bg-slate-200">
             <img 
-              src="MD2.png" 
-              alt="Manish Jangir" 
+              src="MD1.png" 
+              alt="Kailash Bhukar" 
               className="w-full h-full object-cover"
             />
           </div>
           <div>
-            <h4 className="text-base font-black text-emerald-950 uppercase tracking-tight">Manish Jangir</h4>
+            <h4 className="text-base font-black text-emerald-950 uppercase tracking-tight">Kailash Bhukar</h4>
             <p className="text-[11px] text-orange-600 font-bold uppercase tracking-wider mt-0.5">Operational Head</p>
           </div>
           <div className="bg-white/80 p-3.5 rounded-xl border border-orange-100 text-[11px] text-slate-500 font-medium italic relative">
