@@ -93,13 +93,13 @@ export default function About() {
   const directors = [
     { name: "MANISH DHAKA", role: "Managing Director & CEO", image: "MD.png" },
     { name: "Manish Jangir", role: "Cluster Head", image: "MD2.png" },
-    { name: "Sumit Jangid", role: "IT Head", image: "image.png" },
+    { name: "Ashok Kumar Alaria", role: "COO(Chief Operational Officer) ", image: "Ashok.png" },
     { name: "Kailash Bhukar", role: "Operational Head", image: "MD1.png" }
   ];
 
   const management = [
     //{ name: "Kailash Bhukar", role: "Field Officer", image: "MD1.png" },
-    { name: "Ashok Kumar Alaria",role:"Field Officer", image: "Ashok.png" }
+    { name: "Sumit Jangid",role:"IT Head", image: "image.png" }
    // { name: "S.K. MALHOTRA", role: "Operational Strategy Lead", image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=256" },
     //{ name: "RUCHI SAXENA", role: "Risk Management Underwriter", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=256" }
   ];
