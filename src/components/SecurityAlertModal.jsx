@@ -6,10 +6,11 @@ export default function SecurityAlertModal() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Check if user has already acknowledged the warning during this session
-    const alertDismissed = localStorage.getItem('kraaj_security_alert_dismissed');
+    // 🌟 CHANGED: Using sessionStorage instead of localStorage
+    // This resets automatically every time the browser tab is closed and reopened.
+    const alertDismissed = sessionStorage.getItem('kraaj_security_alert_dismissed');
     if (!alertDismissed) {
-      // Small timeout to give a premium entrance feel after page hydration
+      // Small timeout for a premium entrance feel after page loads
       const timer = setTimeout(() => setIsOpen(true), 1200);
       return () => clearTimeout(timer);
     }
@@ -17,8 +18,8 @@ export default function SecurityAlertModal() {
 
   const handleClose = () => {
     setIsOpen(false);
-    // Persist choice so it doesn't show up on every single refresh/page navigate
-    localStorage.setItem('kraaj_security_alert_dismissed', 'true');
+    // 🌟 CHANGED: Saves the state only for the current active tab session
+    sessionStorage.setItem('kraaj_security_alert_dismissed', 'true');
   };
 
   return (
