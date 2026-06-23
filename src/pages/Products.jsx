@@ -160,7 +160,7 @@ export default function Products() {
           </div>
           <div>
             <h4 className="text-base font-black text-emerald-950 uppercase tracking-tight">Manish Jangir</h4>
-            <p className="text-[11px] text-orange-600 font-bold uppercase tracking-wider mt-0.5">Director cum Chairman</p>
+            <p className="text-[11px] text-orange-600 font-bold uppercase tracking-wider mt-0.5">Operational Head</p>
           </div>
           <div className="bg-white/80 p-3.5 rounded-xl border border-orange-100 text-[11px] text-slate-500 font-medium italic relative">
             <Quote className="w-8 h-8 text-orange-200 absolute -top-2 -left-1 opacity-40 pointer-events-none" />

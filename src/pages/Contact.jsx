@@ -18,7 +18,7 @@ export default function Contact() {
   const [activeTab, setActiveCategoryTab] = useState('general');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // 🌟 ADDITION 1: Controlled input state hook layer
+  // Controlled input state hook layer
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -31,13 +31,13 @@ export default function Contact() {
     { id: 'support', title: 'Help & Interest', icon: <HelpCircle className="w-4 h-4" />, placeholder: "Ask about repayment timelines, schedules or active documents..." }
   ];
 
-  // 🌟 ADDITION 2: Dynamic input field keystroke listener
+  // Dynamic input field keystroke listener
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  // 🌟 ADDITION 3: WhatsApp Automation Payload Handler
+  // WhatsApp Automation Payload Handler
   const handleWhatsAppSubmit = (e) => {
     e.preventDefault();
 
@@ -71,8 +71,8 @@ export default function Contact() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-12 gap-12 items-center relative z-10">
       
-      {/* LEFT SIDE: DIRECT CONNECT METRICS */}
-      <div className="md:col-span-5 space-y-6">
+      {/* LEFT SIDE: DIRECT CONNECT METRICS & EMBEDDED MAP */}
+      <div className="md:col-span-5 space-y-6 self-start">
         <div className="space-y-2">
           <span className="text-xs font-black uppercase tracking-widest text-orange-600 bg-orange-50 px-2.5 py-1 rounded-md border border-orange-100 inline-block">
             Connect With Us
@@ -88,7 +88,7 @@ export default function Contact() {
         </p>
 
         {/* High-Contrast Operational Handles */}
-        <div className="space-y-4 text-sm font-bold text-emerald-950 pt-4">
+        <div className="space-y-4 text-sm font-bold text-emerald-950 pt-2">
           <div className="flex items-center gap-3.5 group cursor-pointer">
             <div className="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-700 shadow-inner group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-200">
               <Phone className="w-4 h-4" />
@@ -103,12 +103,35 @@ export default function Contact() {
             <span className="tracking-tight text-emerald-900">microkraaj@gmail.com</span>
           </div>
 
-          <div className="flex items-center gap-3.5 group cursor-pointer">
-            <div className="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-700 shadow-inner group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-200">
+          {/* 🌟 FIXED: Interactive Google Maps Anchor Link Container */}
+          <a 
+            href="https://www.google.com/maps/search/?api=1&query=Ashirvad+Nagar,+Nearby+Choudhary+Ka+Kuva,+Ratangarh,+Churu,+Rajasthan+-+331022"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-start gap-3.5 group cursor-pointer block"
+          >
+            <div className="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-700 shadow-inner group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-200 shrink-0">
               <MapPin className="w-4 h-4" />
             </div>
-            <span className="tracking-tight text-emerald-900">Churu, Rajasthan, India</span>
-          </div>
+            <div className="flex flex-col">
+              <span className="tracking-tight text-emerald-900 font-bold group-hover:text-emerald-700 transition-colors">Churu, Rajasthan, India</span>
+              <span className="text-slate-400 font-medium text-[11px] leading-tight mt-0.5 max-w-[320px]">
+                Ashirvad Nagar, Nearby Choudhary Ka Kuva, Ratangarh, Churu, Rajasthan - 331022
+              </span>
+            </div>
+          </a>
+        </div>
+
+        {/* 🌟 NEW: Clean Interactive Map Container Component Layer */}
+        <div className="w-full h-52 rounded-2xl overflow-hidden border border-slate-200/80 shadow-inner mt-4">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14138.64775460252!2d74.61582845241773!3d28.026462612984924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAshirvad%20Nagar%2C%20Nearby%20Choudhary%20Ka%20Kuva%2C%20Ratangarh%2C%20Churu%2C%20Rajasthan%20-%20331022!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            className="w-full h-full border-0" 
+            allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Office Location Map"
+          />
         </div>
       </div>
 
@@ -166,7 +189,6 @@ export default function Contact() {
                 </div>
               </motion.div>
             ) : (
-              // 🌟 FIXED: Form onSubmit bound directly to the automated WhatsApp engine
               <motion.form 
                 key={activeTab}
                 initial={{ opacity: 0, y: 10 }}
@@ -179,7 +201,6 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
                     <label className="block text-xs font-black text-emerald-300 uppercase tracking-wider pl-1">Your Name</label>
-                    {/* 🌟 FIXED: Linked name, value, and onChange handlers */}
                     <input 
                       required
                       type="text" 
@@ -192,7 +213,6 @@ export default function Contact() {
                   </div>
                   <div className="space-y-1.5">
                     <label className="block text-xs font-black text-emerald-300 uppercase tracking-wider pl-1">Mobile Number</label>
-                    {/* 🌟 FIXED: Linked phone, length boundaries, and onChange tracking */}
                     <input 
                       required
                       type="tel" 
@@ -209,7 +229,6 @@ export default function Contact() {
 
                 <div className="space-y-1.5">
                   <label className="block text-xs font-black text-emerald-300 uppercase tracking-wider pl-1">Message Description</label>
-                  {/* 🌟 FIXED: Bound textarea node attributes explicitly to state payload schema */}
                   <textarea 
                     required
                     name="message"

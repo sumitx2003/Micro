@@ -33,17 +33,17 @@ export default function Home({ setActivePage }) {
   // 2. Data Definitions (Slides, Customers, FAQs)
   const slides = [
     {
-      image: "/grocery.png", 
+      image: "1.jpeg", 
       tagline: "AAPKI ZAROORAT KE SAATHI",
       subText: "Supporting local grocery storefronts and small community trade stalls."
     },
     {
-      image: "/tailor.jpg", 
+      image: "2.jpeg", 
       tagline: "AAPKI SAFALTA KE SAATHI",
       subText: "Empowering micro tailoring businesses and home production units."
     },
     {
-      image: "/dairy.jpg", 
+      image: "3.jpeg", 
       tagline: "CHOTA LOAN, BADE SAPNE",
       subText: "Providing quick capital pathways for rural dairy and micro-farming ventures."
     }
@@ -51,41 +51,41 @@ export default function Home({ setActivePage }) {
 
   const customers = [
     {
-      name: "SUSHILA DEVI",
-      location: "Bangaon, Fatehabad",
+      name: "",
+      location: "Our Happy Customer",
       headline: "STITCHING A BRIGHTER FUTURE",
-      story1: "Sushila Devi's husband is a crop trader, and because of a sudden slowdown in business, his income was not sufficient enough to make a respectful living.",
-      story2: "Sushila ji sensed the need to support him financially and thus started her journey with a loan amount of INR 20,000/- to scale her home tailoring business. Today, she parallelly sells customized clothes, receiving full support from her family as they yield profits from hard work.",
+      story1: "They are crop trader, and because of a sudden slowdown in business, their income was not sufficient enough to make a respectful living.",
+      story2: "We sensed the need to support them financially and thus started  journey with a loan amount of INR 55,000/- to scale her home tailoring business. Today, they parallelly sells customized clothes, receiving full support from her family as they yield profits from hard work.",
       tagline: "-Small Loan Big Dreams-",
-      image: "/tailor.jpg" 
+      image: "4.jpeg" 
     },
     {
-      name: "KAVITA BAI",
-      location: "Bassi, Jaipur",
+      name: "",
+      location: " Our Happy Customer",
       headline: "RETAIL EXPANSION & INDEPENDENCE",
-      story1: "Kavita ran a very small local grocery kiosk, but a lack of liquid working capital restricted her from storing essential daily utility inventory during festive quarters.",
+      story1: "she ran a very small local grocery kiosk, but a lack of liquid working capital restricted her from storing essential daily utility inventory during festive quarters.",
       story2: "Through an individual micro loan support setup, she managed to replenish bulk inventory storage seamlessly. Her daily customer footfall doubled within months, turning her single stall layout into a prominent local market provisions store.",
       tagline: "-Empowering Local Commerce-",
-      image: "/shop.png" 
+      image: "5.jpeg" 
     },
-    {
-      name: "MEENA REGE",
-      location: "Sanganer, Rajasthan",
-      headline: "SCALING HANDLOOM HERITAGE",
-      story1: "Meena ji practiced block printing but struggled to source raw organic dyes and premium fabrics directly from manufacturing nodes due to layout overheads.",
-      story2: "By joining a localized Joint Liability Group, she acquired a structured credit facility to bypass middle trading nodes. She now runs three handloom machines, employing two other women from her village neighborhood cluster.",
-      tagline: "-Preserving Craft, Generating Wealth-",
-      image: "/saaree.jpg" 
-    },
-    {
-      name: "SARITA PATIL",
-      location: "Indore, Madhya Pradesh",
-      headline: "DIARY LIVESTOCK ADVANCEMENT",
-      story1: "Sarita managed a lone milk cattle unit, completely relying on traditional manual maintenance channels which limited her output processing capacity.",
-      story2: "With a fast, asset-free micro enterprise credit disbursal, she invested directly in modern mechanical milking equipment and high-quality nutrient feed profiles. Her daily dairy yield increased safely by 40%, securing her household's stability.",
-      tagline: "-Nurturing Organic Rural Growth-",
-      image: "/dairy.jpg" 
-    }
+{
+  name: "",
+  location: "Our Happy Customer",
+  headline: "MODERN AGRICULTURE DEVELOPMENT",
+  story1: "They owned a small farmland plot and relied on traditional farming methods, resulting in low crop productivity and limited seasonal income.",
+  story2: "Through a Joint Liability Group loan, they invested in drip irrigation systems, quality seeds, and modern farming equipment. Within two harvest cycles, their crop yield increased significantly, helping him expand cultivation and improve his family's financial security.",
+  tagline: "-Empowering Farmers, Growing Prosperity-",
+  image: "6.jpeg"
+},
+{
+  name: "",
+  location: "Our Happy Customer",
+  headline: "TAILORING BUSINESS GROWTH",
+  story1: "She worked as a home-based tailor using an old sewing machine, making it difficult to handle large orders and earn a stable income.",
+  story2: "After receiving a micro-enterprise loan, she purchased advanced stitching equipment and expanded her tailoring services. Today, she manages a small tailoring unit, serves customers across nearby communities, and provides employment opportunities to other women in her area.",
+  tagline: "-Stitching Dreams Into Success-",
+  image: "3.jpeg"
+}
   ];
 
   // Expanded FAQ Dataset mirroring image_8464a4.png specifications
@@ -332,7 +332,7 @@ export default function Home({ setActivePage }) {
           <div className="grid md:grid-cols-12 gap-8 items-center bg-white border border-emerald-900/5 p-6 rounded-[24px] shadow-sm">
             <div className="md:col-span-4 h-56 rounded-2xl overflow-hidden bg-slate-100">
               <img 
-                src="homeloan.jpeg" 
+                src="jlg.jpeg" 
                 alt="Joint Liability Group Alignment" 
                 className="w-full h-full object-cover object-center"
               />
@@ -381,7 +381,7 @@ export default function Home({ setActivePage }) {
             </div>
             <div className="md:col-span-4 h-56 rounded-2xl overflow-hidden bg-slate-100 order-1 md:order-2">
               <img 
-                src="saaree.jpg" 
+                src="5.jpeg" 
                 alt="Micro Enterprise Operation Shop" 
                 className="w-full h-full object-cover object-center"
               />
