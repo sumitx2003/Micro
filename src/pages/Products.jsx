@@ -153,14 +153,14 @@ export default function Products() {
         <div className="md:col-span-4 bg-[#FDFBF7] border border-orange-100 p-6 rounded-3xl flex flex-col items-center text-center space-y-4 relative overflow-hidden">
           <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-md bg-slate-200">
             <img 
-              src="MD1.png" 
-              alt="Kailash Bhukar" 
+              src="MD2.png" 
+              alt="Manish Jangir" 
               className="w-full h-full object-cover"
             />
           </div>
           <div>
-            <h4 className="text-base font-black text-emerald-950 uppercase tracking-tight">Kailash Bhukar</h4>
-            <p className="text-[11px] text-orange-600 font-bold uppercase tracking-wider mt-0.5">Operational Head</p>
+            <h4 className="text-base font-black text-emerald-950 uppercase tracking-tight">Manish Jangir</h4>
+            <p className="text-[11px] text-orange-600 font-bold uppercase tracking-wider mt-0.5">CMO(Chief Marketing Officer)</p>
           </div>
           <div className="bg-white/80 p-3.5 rounded-xl border border-orange-100 text-[11px] text-slate-500 font-medium italic relative">
             <Quote className="w-8 h-8 text-orange-200 absolute -top-2 -left-1 opacity-40 pointer-events-none" />

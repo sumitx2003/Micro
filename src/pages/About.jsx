@@ -92,7 +92,7 @@ export default function About() {
 
   const directors = [
     { name: "MANISH DHAKA", role: "Managing Director & CEO", image: "MD.png" },
-    { name: "Manish Jangir", role: "Cluster Head", image: "MD2.png" },
+    { name: "Manish Jangir", role: "CMO(Chief Marketing Officer)", image: "MD2.png" },
     { name: "Ashok Kumar Alaria", role: "COO(Chief Operational Officer) ", image: "Ashok.png" },
     { name: "Kailash Bhukar", role: "Operational Head", image: "MD1.png" }
   ];
