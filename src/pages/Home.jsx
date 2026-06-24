@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from "react-router-dom";
 import { 
   ShieldCheck, 
   ArrowRight, 
@@ -25,7 +26,7 @@ import {
 // 🌟 IMPORT: Bring in your Security Modal Component layer here
 import SecurityAlertModal from '../components/SecurityAlertModal'; 
 
-export default function Home({ setActivePage }) {
+export default function Home() {
   // 1. Updated State Hooks (Defaulting strictly to new calculator baselines)
   const [loanAmount, setLoanAmount] = useState(55000);
   const [tenure, setTenure] = useState(18);
@@ -169,18 +170,18 @@ export default function Home({ setActivePage }) {
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2">
-              <button 
-                onClick={() => setActivePage('products')} 
-                className="flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white px-8 py-3.5 rounded-xl font-bold shadow-md shadow-emerald-900/10 transition-all duration-300 hover:scale-[1.02]"
-              >
-                Explore Micro Loans <ArrowRight className="w-4 h-4 text-orange-300" />
-              </button>
-              <button 
-                onClick={() => setActivePage('about')}
-                className="border border-emerald-900/20 bg-white/60 backdrop-blur-md hover:bg-white text-emerald-800 transition-all px-8 py-3.5 rounded-xl font-bold"
-              >
-                Our Philosophy
-              </button>
+             <Link
+                 to="/products"
+                 className="flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white px-8 py-3.5 rounded-xl font-bold shadow-md shadow-emerald-900/10 transition-all duration-300 hover:scale-[1.02]"
+>
+                  Explore Micro Loans <ArrowRight className="w-4 h-4 text-orange-300" />
+              </Link>
+            <Link
+              to="/about"
+              className="border border-emerald-900/20 bg-white/60 backdrop-blur-md hover:bg-white text-emerald-800 transition-all px-8 py-3.5 rounded-xl font-bold inline-block"
+>
+              Our Philosophy
+            </Link>
             </div>
           </motion.div>
 
